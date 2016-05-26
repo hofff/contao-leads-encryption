@@ -31,8 +31,3 @@ This extension is dependent on the following extensions:
 ## Screenshots
 
 ![Back end configuration](screenshot-backend.png)
-
-
-## THANK YOU
-
-- ???
