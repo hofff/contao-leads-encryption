@@ -21,6 +21,13 @@ Provides encryption of form data stored via Contao extension `terminal42/contao-
 - max. Contao version: <  3.6.0
 
 
+## Installation
+
+Install the extension via composer: [hofff/contao-leads-encryption](https://packagist.org/packages/hofff/contao-leads-encryption).
+
+If you prefer to install it manually, download the latest release here: https://github.com/hofff/contao-leads-encryption/releases
+
+
 ## Dependency
 
 This extension is dependent on the following extensions:
