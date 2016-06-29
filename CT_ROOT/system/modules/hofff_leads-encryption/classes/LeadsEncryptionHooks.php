@@ -26,9 +26,7 @@ class LeadsEncryptionHooks
    */
   public function modifyLeadsDataOnStore($arrPost, $arrForm, $arrFiles, $intLead, $objFields, &$arrSet)
   {
-    $objForm = \FormModel::findById($objFields->pid);
-    
-    if ($objForm != null && $objForm->encryptLeadsData)
+    if ($this->isEncryptLeadsDataActive($objFields->pid))
     {
       $arrSet['value'] = \Encryption::encrypt($arrSet['value']);
       $arrSet['label'] = \Encryption::encrypt($arrSet['label']);
@@ -40,9 +38,7 @@ class LeadsEncryptionHooks
    */
   public function getLeadsExportRow ($arrField, $arrData, $objConfig, $varValue)
   {
-    $objForm = \FormModel::findById($objConfig->pid);
-
-    if ($objForm != null && $objForm->encryptLeadsData)
+    if ($this->isEncryptLeadsDataActive($objConfig->pid))
     {
       if ($arrField['id'])
       {
@@ -51,5 +47,11 @@ class LeadsEncryptionHooks
     }
     
     return $varValue;
+  }
+  
+  private function isEncryptLeadsDataActive($intFormId)
+  {
+    $objForm = \Database::getInstance()->prepare("SELECT encryptLeadsData FROM tl_form WHERE id = ?")->execute($intFormId);
+    return $objForm->next() && $objForm->encryptLeadsData;
   }
 }
