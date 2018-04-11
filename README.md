@@ -17,8 +17,8 @@ Provides encryption of form data stored via Contao extension `terminal42/contao-
 
 ## Compatibility
 
-- min. Contao version: >= 3.2.0
-- max. Contao version: <  3.6.0
+- Contao version: >= 3.5.0
+- Contao version: >= 4.4.0
 
 
 ## Installation
