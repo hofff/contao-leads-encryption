@@ -36,7 +36,7 @@ class LeadsEncryptionHooks
   /**
    * Encrypt post data after stored to database
    */
-  public function storeLeadsData(&$arrPost, $arrForm, $arrFiles, $intLead, $objFields)
+  public function storeLeadsData($arrPost, $arrForm, $arrFiles, $intLead, $objFields)
   {
     if ($this->isEncryptLeadsDataActive($objFields->pid))
     {
