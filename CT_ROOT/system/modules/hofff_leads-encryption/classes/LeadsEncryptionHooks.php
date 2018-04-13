@@ -57,7 +57,7 @@ class LeadsEncryptionHooks
     {
       if ($arrField['id'])
       {
-        $varValue = \Encryption::decrypt($arrData[$arrField['id']]['value']);
+        $varValue = \Leads\Exporter\Utils\Row::transformValue(\Encryption::decrypt($arrData[$arrField['id']]['value']), $arrField);
       }
     }
     
