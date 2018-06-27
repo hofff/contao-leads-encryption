@@ -1,7 +1,7 @@
 Contao Extension "hofff/contao-leads-encryption"
 ------------------------------------------------
 
-### Version 1.0.1 (2018-04-xx) ###
+### Version 1.0.1 (2018-06-27) ###
 - Fixes also encrypting the content of database column `tl_lead.post_data`
 - Contao 4.4 ready
 - Fixes determining the path of uploaded files in an export
